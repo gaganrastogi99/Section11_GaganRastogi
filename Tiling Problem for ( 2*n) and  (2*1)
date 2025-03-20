@@ -1,0 +1,23 @@
+public class Gagan{
+public static int tilingProblem(int n){
+  int totalWays;
+  
+  if(n==0 || n==1){
+    return 1;
+  }
+  int f1=tilingProblem(n-1);
+  int f2=tilingProblem(n-2);
+  
+  totalWays = f1+f2;
+  return totalWays;
+
+}
+public static void main(String args[]){
+  int n=4;
+  
+  int res= tilingProblem(n);
+  System.out.println(res);
+
+    
+  }  
+}     
