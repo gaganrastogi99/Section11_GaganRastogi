@@ -1,0 +1,20 @@
+public class Gagan{
+public static void removeDuplicates(String s,int idx,StringBuilder newString,boolean map[]){
+  if(idx==s.length()){
+    System.out.println(newString);
+    return ;
+  }
+  char currChar=s.charAt(idx);
+  if(map[currChar-'a']==true){
+    removeDuplicates(s,idx+1,newString,map);
+  }else{
+    if(map[currChar -'a'] = true){
+      removeDuplicates(s,idx+1,newString.append(currChar),map);
+    }
+  }
+}
+public static void main(String args[]){
+  String s="gaggannrasstoggi";
+  removeDuplicates(s,0,new StringBuilder(""),new boolean[26]);
+}  
+}     
